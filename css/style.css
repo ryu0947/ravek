@@ -1,0 +1,142 @@
+/*------------------------------------------------------
+@font-face
+------------------------------------------------------*/
+/* noto-sans-jp-regular - japanese */
+@font-face {
+  font-display: optional;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans JP"), local("Noto Sans JP regular"),
+    url("../fonts/noto_sans_jp_regular.woff2") format("woff2");
+}
+/* noto-sans-jp-700 - japanese */
+@font-face {
+  font-display: optional;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans JP"), local("Noto Sans JP bold"),
+    url("../fonts/noto_sans_jp_bold.woff2") format("woff2");
+}
+/*------------------------------------------------------
+共通スタイル
+------------------------------------------------------*/
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2d2d2d;
+  font-family: "Noto Sans JP", sans-serif;
+}
+/*------------------------------------------------------
+セクション間のタイトル
+------------------------------------------------------*/
+.section-title {
+  line-height: calc(42 / 30);
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #64629d;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .section-title {
+    line-height: 1;
+    font-size: 48px;
+  }
+}
+
+.section-sub-title {
+  margin-bottom: 12px;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: Futura, "Century Gothic", sans-serif;
+  color: #9f9ec1;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .section-sub-title {
+    margin-bottom: 18px;
+    font-size: 36px;
+  }
+}
+/*------------------------------------------------------
+ボタンスタイル
+------------------------------------------------------*/
+.cta-btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background-color: #64629d;
+}
+
+.cta-btn--mv {
+  padding: 18px 51px 22px;
+  font-size: 18px;
+  border-radius: 29px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (min-width: 600px) {
+  .cta-btn--mv {
+    padding: 18px 26px;
+    border-radius: 27px;
+  }
+}
+
+.cta-btn--about {
+  padding: 18px 42px 22px;
+  font-size: 18px;
+  border-radius: 29px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (min-width: 600px) {
+  .cta-btn--about {
+    padding: 23px 56px;
+    font-size: 24px;
+    border-radius: 50px;
+  }
+}
+
+.cta-btn--experience {
+  padding: 18px 42px 22px;
+  font-size: 18px;
+  border-radius: 29px;
+}
+
+@media screen and (min-width: 600px) {
+  .cta-btn--experience {
+    padding: 23px 53px 23px;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    border-radius: 50px;
+  }
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 18px 51px 22px;
+  border: 2px solid #64629d;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: #64629d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+  border-radius: 29px;
+}
+
+@media screen and (min-width: 600px) {
+  .download-btn {
+    padding: 18px 26px;
+    border-radius: 27px;
+  }
+}
+/*------------------------------------------------------
+セクション間のCTAエリア
+------------------------------------------------------*/
