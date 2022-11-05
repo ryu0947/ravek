@@ -28,6 +28,32 @@ body {
   color: #2d2d2d;
   font-family: "Noto Sans JP", sans-serif;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sp-break {
+  display: inline-block;
+}
+
+@media screen and (min-width: 600px) {
+  .sp-break {
+    display: none;
+  }
+}
+
+.inner {
+  padding: 0 calc((20 / 375) * 100vw);
+}
+
+@media screen and (min-width: 600px) {
+  .inner {
+    padding: 0 40px;
+    box-sizing: content-box;
+  }
+}
 /*------------------------------------------------------
 セクション間のタイトル
 ------------------------------------------------------*/
@@ -60,6 +86,22 @@ body {
 @media screen and (min-width: 600px) {
   .section-sub-title {
     margin-bottom: 18px;
+    font-size: 36px;
+  }
+}
+
+.section-cta-title {
+  line-height: calc(29 / 18);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .section-cta-title {
+    line-height: calc(52 / 36);
     font-size: 36px;
   }
 }
@@ -105,14 +147,13 @@ body {
 
 .cta-btn--experience {
   padding: 18px 42px 22px;
-  font-size: 18px;
+  font-size: clamp(16px, 18 / 375 * 100vw, 24px);
   border-radius: 29px;
 }
 
 @media screen and (min-width: 600px) {
   .cta-btn--experience {
     padding: 23px 53px 23px;
-    font-size: 24px;
     letter-spacing: 0.02em;
     border-radius: 50px;
   }
@@ -140,3 +181,18 @@ body {
 /*------------------------------------------------------
 セクション間のCTAエリア
 ------------------------------------------------------*/
+.cta {
+  padding: 40px 0;
+  background-color: #2d2d32;
+}
+
+@media screen and (min-width: 600px) {
+  .cta {
+    padding: 60px 0;
+  }
+}
+
+.cta-btn-wrap {
+  margin-top: 24px;
+  text-align: center;
+}
