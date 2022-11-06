@@ -27,6 +27,7 @@ body {
   font-weight: 400;
   color: #2d2d2d;
   font-family: "Noto Sans JP", sans-serif;
+  background-color: #ffffff;
 }
 
 img {
@@ -195,4 +196,49 @@ img {
 .cta-btn-wrap {
   margin-top: 24px;
   text-align: center;
+}
+/*------------------------------------------------------
+導入実績
+------------------------------------------------------*/
+.work {
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .work {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .work__inner {
+    margin: auto;
+    max-width: 972px;
+  }
+}
+
+.work__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 11px;
+  row-gap: 12px;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  .work__list {
+    column-gap: 40px;
+    row-gap: 50px;
+    margin-top: 40px;
+  }
+}
+
+.work__item {
+  width: calc(25% - 11px * 3 / 4);
+}
+
+@media screen and (min-width: 600px) {
+  .work__item {
+    width: calc(25% - 40px * 3 / 4);
+  }
 }
