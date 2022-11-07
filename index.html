@@ -24,6 +24,77 @@
     <title>Ravek</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="img/header-logo-pc.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/header-logo-pc.png"
+            />
+            <source type="image/webp" srcset="img/header-logo-sp.webp" />
+            <source srcset="img/header-logo-sp.png" />
+            <img src="" alt="img/header-logo-pc.png" loading="lazy" />
+          </picture>
+        </h1>
+        <nav class="pc-nav">
+          <ul class="pc-nav__list">
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">特徴</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">導入実績</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">導入までの流れ</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">料金プラン</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">よくある質問</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="cta-btn cta-btn--pc-nav">無料で使ってみる</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="js-draw" class="draw-btn" type="button">
+          <span class="draw-btn__text">MENU</span>
+          <span class="draw-btn__item"></span>
+          <span class="draw-btn__item"></span>
+          <span class="draw-btn__item"></span>
+        </button>
+      </div>
+    </header>
+    <nav class="sp-nav">
+      <ul class="sp-nav__list">
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">特徴</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">導入実績</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">導入までの流れ</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">料金プラン</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">よくある質問</a>
+        </li>
+      </ul>
+      <div class="sp-nav__btn">
+        <a href="" class="cta-btn cta-btn--nav">無料でRavekを使ってみる</a>
+        <a href="" class="download-btn">資料をダウンロードする</a>
+      </div>
+    </nav>
     <main>
       <section class="about">
         <div class="section-sub-title">What is Ravek?</div>
