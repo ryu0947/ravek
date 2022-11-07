@@ -17,11 +17,6 @@
       crossorigin
     />
     <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.min.css"
-      as="style"
-    />
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.min.css"
     />
@@ -29,20 +24,290 @@
     <title>Ravek</title>
   </head>
   <body>
-    <section class="cta">
-      <div class="inner">
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="img/header-logo-pc.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/header-logo-pc.png"
+            />
+            <source type="image/webp" srcset="img/header-logo-sp.webp" />
+            <source srcset="img/header-logo-sp.png" />
+            <img src="" alt="img/header-logo-pc.png" loading="lazy" />
+          </picture>
+        </h1>
+        <nav class="pc-nav">
+          <ul class="pc-nav__list">
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">特徴</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">導入実績</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">導入までの流れ</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">料金プラン</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="pc-nav__link">よくある質問</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="" class="cta-btn cta-btn--pc-nav">無料で使ってみる</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="js-draw" class="draw-btn" type="button">
+          <span class="draw-btn__text">MENU</span>
+          <span class="draw-btn__item"></span>
+          <span class="draw-btn__item"></span>
+          <span class="draw-btn__item"></span>
+        </button>
+      </div>
+    </header>
+    <nav class="sp-nav">
+      <ul class="sp-nav__list">
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">特徴</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">導入実績</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">導入までの流れ</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">料金プラン</a>
+        </li>
+        <li class="sp-nav__item">
+          <a href="" class="sp-nav__link">よくある質問</a>
+        </li>
+      </ul>
+      <div class="sp-nav__btn">
+        <a href="" class="cta-btn cta-btn--nav">無料でRavekを使ってみる</a>
+        <a href="" class="download-btn">資料をダウンロードする</a>
+      </div>
+    </nav>
+    <main>
+      <section class="about">
+        <div class="section-sub-title">What is Ravek?</div>
+        <h2 class="section-title">
+          タスク管理の時間を<br class="is-sp" />削減するツール
+        </h2>
+        <div class="inner about__inner">
+          <p class="about__text">
+            Ravek（レイベック）は、<br class="is-sp" /><strong
+              >複数人が関わるプロジェクトでのタスク管理を簡単かつ高速にするツール</strong
+            >です。
+          </p>
+          <p class="about__text">
+            タスクの登録や進捗管理の手間を減らし、わ<br
+              class="is-sp"
+            />かりやすく見える化することで<br />
+            タスク管理にかかる時間を極限まで減らし、<br
+              class="is-sp"
+            />本質的な業務に時間を使いましょう。
+          </p>
+          <div class="cta-btn-wrap cta-btn-wrap--about">
+            <a href="#" class="cta-btn cta-btn--experience">
+              無料でRavekを使ってみる
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
         <h2 class="section-cta-title">
           14日間の無料トライアル可能。<br />Ravekで快適なタスク管理を<span
             class="sp-break"
             >体験しよう</span
           >
         </h2>
-        <div class="cta-btn-wrap">
-          <a href="#" class="cta-btn cta-btn--experience">
-            無料でRavekを使ってみる
-          </a>
+        <div class="inner">
+          <div class="cta-btn-wrap">
+            <a href="#" class="cta-btn cta-btn--experience">
+              無料でRavekを使ってみる
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="work">
+        <div class="section-sub-title">Users</div>
+        <h2 class="section-title">導入実績</h2>
+        <div class="inner work__inner">
+          <ul class="work__list">
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+            <li class="work__item">
+              <picture>
+                <source
+                  media="(min-width: 600px)"
+                  type="image/webp"
+                  srcset="img/work-pc.webp"
+                />
+                <source media="(min-width: 600px)" srcset="img/work-pc.png" />
+                <source type="image/webp" srcset="img/work-sp.webp" />
+                <source srcset="img/work-sp.png" />
+                <img src="img/work-pc.png" alt="Icedog Works" loading="lazy" />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="section-sub-title">Question</div>
+        <h2 class="section-title">よくある質問</h2>
+        <div class="inner faq__inner">
+          <dl class="faq__list">
+            <div class="faq__item">
+              <dt class="faq__question">
+                Ravekはユーザー1人あたりの課金制なのですか？
+              </dt>
+              <dd class="faq__answer">
+                いえ、Ravekは１アカウント開設いただくと、そのプランに応じたユーザー数の分だけ、使用できます。<br />
+                もしプランのデフォルトユーザー数を超えて利用されたい場合は、お問い合わせください。
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question">
+                Ravekはユーザー1人あたりの課金制なのですか？
+              </dt>
+              <dd class="faq__answer">
+                いえ、Ravekは１アカウント開設いただくと、そのプランに応じたユーザー数の分だけ、使用できます。<br />
+                もしプランのデフォルトユーザー数を超えて利用されたい場合は、お問い合わせください。
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question">
+                Ravekはユーザー1人あたりの課金制なのですか？
+              </dt>
+              <dd class="faq__answer">
+                いえ、Ravekは１アカウント開設いただくと、そのプランに応じたユーザー数の分だけ、使用できます。<br />
+                もしプランのデフォルトユーザー数を超えて利用されたい場合は、お問い合わせください。
+              </dd>
+            </div>
+            <div class="faq__item">
+              <dt class="faq__question">
+                Ravekはユーザー1人あたりの課金制なのですか？
+              </dt>
+              <dd class="faq__answer">
+                いえ、Ravekは１アカウント開設いただくと、そのプランに応じたユーザー数の分だけ、使用できます。<br />
+                もしプランのデフォルトユーザー数を超えて利用されたい場合は、お問い合わせください。
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="cta">
+        <h2 class="section-cta-title">
+          14日間の無料トライアル可能。<br />Ravekで快適なタスク管理を<span
+            class="sp-break"
+            >体験しよう</span
+          >
+        </h2>
+        <div class="inner">
+          <div class="cta-btn-wrap">
+            <a href="#" class="cta-btn cta-btn--experience">
+              無料でRavekを使ってみる
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

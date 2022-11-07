@@ -27,6 +27,7 @@ body {
   font-weight: 400;
   color: #2d2d2d;
   font-family: "Noto Sans JP", sans-serif;
+  background-color: #ffffff;
 }
 
 img {
@@ -41,6 +42,26 @@ img {
 @media screen and (min-width: 600px) {
   .sp-break {
     display: none;
+  }
+}
+
+.is-sp {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .is-sp {
+    display: none;
+  }
+}
+
+.is-pc {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .is-pc {
+    display: block;
   }
 }
 
@@ -59,7 +80,7 @@ img {
 ------------------------------------------------------*/
 .section-title {
   line-height: calc(42 / 30);
-  font-size: 30px;
+  font-size: clamp(30px, 40 / 768 * 100vw, 48px);
   letter-spacing: 0.05em;
   font-weight: 700;
   color: #64629d;
@@ -69,7 +90,6 @@ img {
 @media screen and (min-width: 600px) {
   .section-title {
     line-height: 1;
-    font-size: 48px;
   }
 }
 
@@ -195,4 +215,209 @@ img {
 .cta-btn-wrap {
   margin-top: 24px;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .cta-btn-wrap {
+    margin-top: 32px;
+  }
+
+  .cta-btn-wrap--about {
+    margin-top: 40px;
+  }
+}
+/*------------------------------------------------------
+What is Ravek?
+------------------------------------------------------*/
+.about {
+  padding: 80px 0 60px;
+}
+
+@media screen and (min-width: 600px) {
+  .about {
+    padding: 100px 0;
+  }
+}
+
+.about__inner {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  .about__inner {
+    margin-top: 29px;
+  }
+}
+
+.about__text {
+  line-height: calc(26 / 16);
+  font-size: clamp(14px, 16 / 375 * 100vw, 18px);
+  text-align: center;
+}
+
+.about__text:first-child {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about__text {
+    line-height: calc(32 / 18);
+  }
+
+  .about__text:first-child {
+    margin-bottom: 30px;
+  }
+}
+/*------------------------------------------------------
+導入実績
+------------------------------------------------------*/
+.work {
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .work {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .work__inner {
+    margin: auto;
+    max-width: 972px;
+  }
+}
+
+.work__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 11px;
+  row-gap: 12px;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  .work__list {
+    column-gap: 40px;
+    row-gap: 50px;
+    margin-top: 40px;
+  }
+}
+
+.work__item {
+  width: calc(25% - 11px * 3 / 4);
+}
+
+@media screen and (min-width: 600px) {
+  .work__item {
+    width: calc(25% - 40px * 3 / 4);
+  }
+}
+/*------------------------------------------------------
+よくある質問
+------------------------------------------------------*/
+.faq {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 600px) {
+  .faq {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .faq__inner {
+    margin: auto;
+    max-width: 920px;
+  }
+}
+
+.faq__list {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .faq__list {
+    margin-top: 60px;
+  }
+}
+
+.faq__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.faq__question {
+  position: relative;
+  padding: 10px 10px 8px 47px;
+  line-height: calc(26 / 16);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #64629d;
+}
+
+.faq__question::before {
+  content: "Q";
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__question {
+    padding: 22px 22px 22px 56px;
+    line-height: 1;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .faq__question::before {
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+.faq__answer {
+  position: relative;
+  margin-top: 16px;
+  padding: 12px 16px 12px 40px;
+  line-height: calc(26 / 16);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__answer {
+    margin-top: 14px;
+    padding: 21px 21px 22px 56px;
+    line-height: calc(32 / 18);
+    font-size: 18px;
+    border-radius: 10px;
+  }
+}
+
+.faq__answer::before {
+  content: "A";
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__answer::before {
+    top: 25px;
+    left: 25px;
+  }
 }
