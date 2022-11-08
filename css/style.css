@@ -187,7 +187,7 @@ img {
 
 .download-btn {
   display: inline-block;
-  padding: 18px 51px 22px;
+  padding: 18px 49px 22px;
   border: 2px solid #64629d;
   font-size: 18px;
   line-height: 1;
@@ -208,8 +208,11 @@ img {
 ヘッダー
 ------------------------------------------------------*/
 .header {
+  position: relative;
   padding: 0 20px;
   height: 52px;
+  background-color: #fff;
+  z-index: 1000;
 }
 
 @media screen and (min-width: 820px) {
@@ -318,10 +321,60 @@ img {
   }
 }
 
+.sp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 52px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #edecfc;
+}
+
 @media screen and (min-width: 820px) {
   .sp-nav {
     display: none;
   }
+}
+
+.sp-nav__inner {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sp-nav__list {
+  margin: 0 auto 62px;
+  width: 206px;
+}
+
+.sp-nav__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.sp-nav__link {
+  display: inline-block;
+  position: relative;
+  padding-left: 32px;
+  line-height: 1;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.sp-nav__link::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../img/draw-icon.png) no-repeat center / contain;
 }
 /*------------------------------------------------------
 セクション間のCTAエリア
@@ -350,6 +403,16 @@ img {
   .cta-btn-wrap--about {
     margin-top: 40px;
   }
+}
+
+.cta-btn--nav {
+  margin-bottom: 24px;
+  width: 300px;
+  height: 58px;
+  line-height: 58px;
+  font-size: 18px;
+  border-radius: 29px;
+  text-align: center;
 }
 /*------------------------------------------------------
 What is Ravek?
