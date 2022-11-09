@@ -136,6 +136,17 @@ img {
   background-color: #64629d;
 }
 
+@media screen and (min-width: 1024px) {
+  .cta-btn {
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .cta-btn:hover {
+    background-color: #fff;
+    color: #64629d;
+  }
+}
+
 .cta-btn--mv {
   padding: 18px 51px 22px;
   font-size: 18px;
@@ -169,6 +180,7 @@ img {
   padding: 18px 42px 22px;
   font-size: clamp(16px, 18 / 375 * 100vw, 24px);
   border-radius: 29px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
 }
 
 @media screen and (min-width: 600px) {
@@ -202,6 +214,12 @@ img {
   .download-btn {
     padding: 18px 26px;
     border-radius: 27px;
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .download-btn:hover {
+    color: #fff;
+    background-color: #64629d;
   }
 }
 /*------------------------------------------------------
@@ -267,9 +285,29 @@ img {
 
 .pc-nav__link {
   display: inline-block;
+  position: relative;
   font-size: 14px;
   letter-spacing: 0.03em;
   font-weight: 700;
+}
+
+.pc-nav__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  transition: width 0.3s;
+  background-color: #64629d;
+}
+
+.pc-nav__link:hover:after {
+  content: "";
+  margin: auto;
+  width: 50%;
 }
 
 .draw-btn {
