@@ -35,14 +35,8 @@ img {
   height: auto;
 }
 
-.sp-break {
+.break {
   display: inline-block;
-}
-
-@media screen and (min-width: 600px) {
-  .sp-break {
-    display: none;
-  }
 }
 
 .is-sp {
@@ -563,6 +557,138 @@ What is Ravek?
 @media screen and (min-width: 600px) {
   .work__item {
     width: calc(25% - 40px * 3 / 4);
+  }
+}
+/*------------------------------------------------------
+導入までの流れ
+------------------------------------------------------*/
+.users {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 768px) {
+  .users {
+    padding: 100px 0 80px;
+  }
+}
+
+.users__inner {
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .users__inner {
+    margin: 55px auto 0;
+    max-width: 1070px;
+  }
+}
+
+.users__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .users__list {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__list {
+    column-gap: 115px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .users__item {
+    position: relative;
+    width: calc(33.3% - 50px * 2 / 3);
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__item {
+    width: calc(33.3% - 115px * 2 / 3);
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__item:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: -25%;
+    width: 22px;
+    height: 56px;
+    background: url(../img/flow-nav.svg) no-repeat center / contain;
+  }
+}
+
+.users__thumb {
+  position: relative;
+  padding: 21px 68px;
+  border-radius: 30px;
+  background-color: #edecfc;
+}
+
+@media screen and (min-width: 768px) {
+  .users__thumb {
+    padding: 21px 40px;
+  }
+}
+
+.users__thumb::before {
+  content: attr(data-num);
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  line-height: 1;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Futura, "Century Gothic", sans-serif;
+  color: #64629d;
+}
+
+@media screen and (min-width: 768px) {
+  .users__thumb::before {
+    top: -19px;
+    left: -22px;
+  }
+}
+
+.users__body {
+  margin-top: 16px;
+}
+
+.users__title {
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .users__title {
+    line-height: calc(35 / 24);
+    font-size: 24px;
+  }
+}
+
+.users__text {
+  margin-top: 16px;
+  line-height: calc(29 / 16);
+}
+
+@media screen and (min-width: 768px) {
+  .users__text {
+    margin-top: 8px;
   }
 }
 /*------------------------------------------------------
