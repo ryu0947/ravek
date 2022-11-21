@@ -35,14 +35,8 @@ img {
   height: auto;
 }
 
-.sp-break {
+.break {
   display: inline-block;
-}
-
-@media screen and (min-width: 600px) {
-  .sp-break {
-    display: none;
-  }
 }
 
 .is-sp {
@@ -136,6 +130,17 @@ img {
   background-color: #64629d;
 }
 
+@media screen and (min-width: 1024px) {
+  .cta-btn {
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .cta-btn:hover {
+    background-color: #fff;
+    color: #64629d;
+  }
+}
+
 .cta-btn--mv {
   padding: 18px 51px 22px;
   font-size: 18px;
@@ -169,6 +174,7 @@ img {
   padding: 18px 42px 22px;
   font-size: clamp(16px, 18 / 375 * 100vw, 24px);
   border-radius: 29px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
 }
 
 @media screen and (min-width: 600px) {
@@ -202,6 +208,12 @@ img {
   .download-btn {
     padding: 18px 26px;
     border-radius: 27px;
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .download-btn:hover {
+    color: #fff;
+    background-color: #64629d;
   }
 }
 /*------------------------------------------------------
@@ -267,9 +279,29 @@ img {
 
 .pc-nav__link {
   display: inline-block;
+  position: relative;
   font-size: 14px;
   letter-spacing: 0.03em;
   font-weight: 700;
+}
+
+.pc-nav__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  transition: width 0.3s;
+  background-color: #64629d;
+}
+
+.pc-nav__link:hover:after {
+  content: "";
+  margin: auto;
+  width: 50%;
 }
 
 .draw-btn {
@@ -483,6 +515,162 @@ What is Ravek?
   }
 }
 /*------------------------------------------------------
+Feature
+------------------------------------------------------*/
+.feature {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__inner {
+    margin: auto;
+    max-width: 1167px;
+  }
+}
+
+.feature__list {
+  margin-top: 40px;
+}
+
+.feature__item {
+  margin-bottom: 40px;
+}
+
+.feature__item:last-child {
+  margin-bottom: 0;
+}
+
+.feature__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.feature__item--reverse {
+  flex-direction: row-reverse;
+}
+
+.feature__thumb {
+  position: relative;
+  margin: auto;
+  width: calc(280 / 375 * 100%);
+  z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__thumb {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    text-align: right;
+  }
+
+  .feature__thumb--reverse {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__img {
+    width: calc(520 / 1167 * 100%);
+  }
+}
+
+.feature__description {
+  padding: 40px 20px;
+  width: 100%;
+  margin-top: -65px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.feature__item:nth-child(2) .feature__description {
+  margin-top: -70px;
+}
+
+.feature__item:last-child .feature__description {
+  margin-top: -64px;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__description {
+    display: flex;
+    column-gap: 18px;
+    margin-top: 0;
+    padding: 65px 0 64px 40px;
+    flex: 0 0 calc(742 / 1167 * 100%);
+  }
+
+  .feature__description--reverse {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+
+  .feature__item:nth-child(2) .feature__description {
+    margin-top: 0;
+  }
+
+  .feature__item:last-child .feature__description {
+    margin-top: 0;
+  }
+}
+
+.feature__num {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+  font-size: 42px;
+  font-weight: 700;
+  font-family: Futura, "Century Gothic", sans-serif;
+  color: #64629d;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__num {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 60px;
+  }
+}
+
+.feature__title {
+  line-height: calc(16 / 11);
+  font-size: clamp(17px, 20 / 375 * 100vw, 36px);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__title {
+    line-height: calc(26 / 18);
+  }
+}
+
+.feature__text {
+  margin-top: 8px;
+  line-height: calc(11 / 7);
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__text {
+    margin-top: 17px;
+    line-height: calc(29 / 16);
+    max-width: 470px;
+    font-size: 16px;
+  }
+}
+/*------------------------------------------------------
 導入実績
 ------------------------------------------------------*/
 .work {
@@ -525,6 +713,138 @@ What is Ravek?
 @media screen and (min-width: 600px) {
   .work__item {
     width: calc(25% - 40px * 3 / 4);
+  }
+}
+/*------------------------------------------------------
+導入までの流れ
+------------------------------------------------------*/
+.users {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 768px) {
+  .users {
+    padding: 100px 0 80px;
+  }
+}
+
+.users__inner {
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .users__inner {
+    margin: 55px auto 0;
+    max-width: 1070px;
+  }
+}
+
+.users__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .users__list {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__list {
+    column-gap: 115px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .users__item {
+    position: relative;
+    width: calc(33.3% - 50px * 2 / 3);
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__item {
+    width: calc(33.3% - 115px * 2 / 3);
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .users__item:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: -25%;
+    width: 22px;
+    height: 56px;
+    background: url(../img/flow-nav.svg) no-repeat center / contain;
+  }
+}
+
+.users__thumb {
+  position: relative;
+  padding: 21px 68px;
+  border-radius: 30px;
+  background-color: #edecfc;
+}
+
+@media screen and (min-width: 768px) {
+  .users__thumb {
+    padding: 21px 40px;
+  }
+}
+
+.users__thumb::before {
+  content: attr(data-num);
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  line-height: 1;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Futura, "Century Gothic", sans-serif;
+  color: #64629d;
+}
+
+@media screen and (min-width: 768px) {
+  .users__thumb::before {
+    top: -19px;
+    left: -22px;
+  }
+}
+
+.users__body {
+  margin-top: 16px;
+}
+
+.users__title {
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .users__title {
+    line-height: calc(35 / 24);
+    font-size: 24px;
+  }
+}
+
+.users__text {
+  margin-top: 16px;
+  line-height: calc(29 / 16);
+}
+
+@media screen and (min-width: 768px) {
+  .users__text {
+    margin-top: 8px;
   }
 }
 /*------------------------------------------------------
@@ -633,5 +953,134 @@ What is Ravek?
   .faq__answer::before {
     top: 25px;
     left: 25px;
+  }
+}
+/*------------------------------------------------------
+footer
+------------------------------------------------------*/
+.footer {
+  padding: 40px 0;
+  background-color: #000;
+}
+
+.footer__inner {
+  text-align: center;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 20px;
+    max-width: 1187px;
+    text-align: left;
+    box-sizing: content-box;
+  }
+}
+
+.footer__info {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__info {
+    margin-top: 0;
+  }
+}
+
+.footer__sns__title {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Futura, "Century Gothic", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__sns-list {
+  display: flex;
+  column-gap: 18px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.footer__sns-item {
+  width: 24px;
+}
+
+.footer__sns-link {
+  display: inline-block;
+  width: 100%;
+}
+
+.footer__logo {
+  margin: auto;
+  width: 69px;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__logo {
+    margin: 0;
+    width: 69px;
+  }
+}
+
+.footer__nav {
+  margin: 14px 0 28px;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__nav {
+    margin: 19px 0;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__nav-list {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 14px;
+  }
+}
+
+.footer__nav-link {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.copyright {
+  display: block;
+  line-height: 1;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.copyright__text {
+  display: block;
+}
+
+.copyright__text:first-child {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 820px) {
+  .copyright__text {
+    display: inline-block;
+  }
+
+  .copyright__text:first-child {
+    margin: 0 14px 0 0;
   }
 }
